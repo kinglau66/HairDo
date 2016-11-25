@@ -3,640 +3,667 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Hairdo- The best agent for hair saloons</title>
+  <title>Hairdo- The best agent for hair saloons</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/comment-and-rating.css" rel="stylesheet">
-	<link href="css/photo-gallery.css" rel="stylesheet">
-	
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!-- Custom CSS -->
+  <link href="css/comment-and-rating.css" rel="stylesheet">
+  <link href="css/photo-gallery.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        
     <![endif]-->
-</head>
-
-<body>
-	 <!-- Navigation -->
+  <!-- jquery script-->
+ 
+  <script type="text/javascript">
+ 
+          function initMap() {
+		  var pos = {lat:5.358315, lng:100.30234730000006};
+          
+          var map = new google.maps.Map(document.getElementById('map'),{ 
+              zoom: 18,
+			  center: pos
+          });
+		  
+		  var marker = new google.maps.Marker({
+		  position: pos,
+		  map:map
+			});  
+        }
+      
+    </script>
+	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaooOLbl25KX0E_-hnOI6LyLcSBlg-nho&callback=initMap"></script>
+  <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		
-			<div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				 <a class="navbar-brand" href="index.html"><img src="logo/logo1.png" alt="My Image" class="img-responsive"></a>
-				  
+          <a class="navbar-brand" href="index.html"><img src="logo/logo1.png" alt="My Image" class="img-responsive"></a>
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+
+
+
+          <form id="signin" class="navbar-form navbar-right" role="form">
+
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-				
-				
-				
-				 <form id="signin" class="navbar-form navbar-right" role="form">
-				
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
-                        </div>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
-                        </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+            </div>
 
-                        <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-						<li><a href="#modal-signup" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>	
-				</u1>
-					
-                   </form>
-					
-			</div>
-            <!-- /.navbar-collapse -->
-        
-		</div>
-		<!-- /.container-fluid -->
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a href="#modal-signup" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              </u1>
+
+          </form>
+
+        </div>
+        <!-- /.navbar-collapse -->
+
+      </div>
+      <!-- /.container-fluid -->
     </nav>
-	
-	<!-- page content -->	
-<div class="container">
-<div class="row">
-    <h2>
-        Mr. M.'s Hair Saloon
-    </h2>
-    
-    <div class="col-md-6">
-        <h3>
-            <small>M034, DESASISWA RESTU</small>
-        </h3>
-        <p>
-			BASIC DESCRIPTION
-            Sample of date display with sample layout. Note image changes color on mouse over and is responsive.
-        </p>
-       
-        <h4>
-            SERVICE MENU
-        </h4>
-        <ul class="list-group text-center">
-            <li class="list-group-item">EYEBROW SHAPING 
-			<p class = "list-group-item-text"> $15.00</p></li>			
-             <li class="list-group-item">JUNIOR HAIRCUT 
-			<p class = "list-group-item-text"> $15.00</p></li>			
-			 <li class="list-group-item">HAIR WASHING
-			<p class = "list-group-item-text"> $15.00</p></li>
-        </ul>
-    </div><!--/. col-md -->
-		
-    <div class="col-md-5">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2948.2793897849465!2d-71.0596334!3d42.3578847!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1394254234525" width="400" height="400" style="border:0"></iframe>
-    </div><!--/span-->
-</div><!--/row-->
-</div><!--./container -->
 
-<!-- photo gallery -->
-
-<section>
-  <div class="container gal-container">
-    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#1">
-          <img src="http://stylenet.com/files/2259/319121-tampa_FL_salon_spa_banner.jpg">
-        </a>
-        <div class="modal fade" id="1" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/i3xhd/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the first one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#2">
-          <img src="http://placemi.com/gut3z/1000x750">
-        </a>
-        <div class="modal fade" id="2" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/gut3z/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the second one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#3">
-          <img src="http://placemi.com/yggpo/1000x750">
-        </a>
-        <div class="modal fade" id="3" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/yggpo/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the third one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#4">
-          <img src="http://placemi.com/49zqo/1000x750">
-        </a>
-        <div class="modal fade" id="4" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/49zqo/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the fourth one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#5">
-          <img src="http://placemi.com/k2mjk/1000x750">
-        </a>
-        <div class="modal fade" id="5" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/k2mjk/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the fifth one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#6">
-          <img src="http://placemi.com/lv0ga/1000x750">
-        </a>
-        <div class="modal fade" id="6" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/lv0ga/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the sixth one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#7">
-          <img src="http://placemi.com/3rezh/1000x750">
-        </a>
-        <div class="modal fade" id="7" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/3rezh/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the seventh one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#8">
-          <img src="http://placemi.com/nfjhz/1000x750">
-        </a>
-        <div class="modal fade" id="8" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/nfjhz/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the eighth one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#9">
-          <img src="http://placemi.com/59h1p/1000x750">
-        </a>
-        <div class="modal fade" id="9" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/59h1p/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the ninth one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#10">
-          <img src="http://placemi.com/lybbn/1000x750">
-        </a>
-        <div class="modal fade" id="10" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/lybbn/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the tenth one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#11">
-          <img src="http://placemi.com/vnatq/1000x750">
-        </a>
-        <div class="modal fade" id="11" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/vnatq/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the leventh one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#12">
-          <img src="http://placemi.com/wbjov/1000x750">
-        </a>
-        <div class="modal fade" id="12" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/wbjov/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the 12th one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#13">
-          <img src="http://placemi.com/ts4a8/1000x750">
-        </a>
-        <div class="modal fade" id="13" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/ts4a8/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the 13th one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#14">
-          <img src="http://placemi.com/i8yd4/1000x750">
-        </a>
-        <div class="modal fade" id="14" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/i8yd4/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the 14th one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#15">
-          <img src="http://placemi.com/ak6mk/1000x750">
-        </a>
-        <div class="modal fade" id="15" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/ak6mk/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the 15th one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-      <div class="box">
-        <a href="#" data-toggle="modal" data-target="#16">
-          <img src="http://placemi.com/pgco7/1000x750">
-        </a>
-        <div class="modal fade" id="16" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <div class="modal-body">
-                <img src="http://placemi.com/pgco7/1000x750">
-              </div>
-                <div class="col-md-12 description">
-                  <h4>This is the 16th one on my Gallery</h4>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- comments and rating -->
+    <!-- page content -->
     <div class="container">
-    			
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="rating-block">
-					<h4>Average user rating</h4>
-					<h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<h4>Rating breakdown</h4>
-				<div class="pull-left">
-					<div class="pull-left" style="width:35px; line-height:1;">
-						<div style="height:9px; margin:5px 0;">5 <span class="glyphicon glyphicon-star"></span></div>
-					</div>
-					<div class="pull-left" style="width:180px;">
-						<div class="progress" style="height:9px; margin:8px 0;">
-						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 1000%">
-							<span class="sr-only">80% Complete (danger)</span>
-						  </div>
-						</div>
-					</div>
-					<div class="pull-right" style="margin-left:10px;">1</div>
-				</div>
-				<div class="pull-left">
-					<div class="pull-left" style="width:35px; line-height:1;">
-						<div style="height:9px; margin:5px 0;">4 <span class="glyphicon glyphicon-star"></span></div>
-					</div>
-					<div class="pull-left" style="width:180px;">
-						<div class="progress" style="height:9px; margin:8px 0;">
-						  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
-							<span class="sr-only">80% Complete (danger)</span>
-						  </div>
-						</div>
-					</div>
-					<div class="pull-right" style="margin-left:10px;">1</div>
-				</div>
-				<div class="pull-left">
-					<div class="pull-left" style="width:35px; line-height:1;">
-						<div style="height:9px; margin:5px 0;">3 <span class="glyphicon glyphicon-star"></span></div>
-					</div>
-					<div class="pull-left" style="width:180px;">
-						<div class="progress" style="height:9px; margin:8px 0;">
-						  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-							<span class="sr-only">80% Complete (danger)</span>
-						  </div>
-						</div>
-					</div>
-					<div class="pull-right" style="margin-left:10px;">0</div>
-				</div>
-				<div class="pull-left">
-					<div class="pull-left" style="width:35px; line-height:1;">
-						<div style="height:9px; margin:5px 0;">2 <span class="glyphicon glyphicon-star"></span></div>
-					</div>
-					<div class="pull-left" style="width:180px;">
-						<div class="progress" style="height:9px; margin:8px 0;">
-						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
-							<span class="sr-only">80% Complete (danger)</span>
-						  </div>
-						</div>
-					</div>
-					<div class="pull-right" style="margin-left:10px;">0</div>
-				</div>
-				<div class="pull-left">
-					<div class="pull-left" style="width:35px; line-height:1;">
-						<div style="height:9px; margin:5px 0;">1 <span class="glyphicon glyphicon-star"></span></div>
-					</div>
-					<div class="pull-left" style="width:180px;">
-						<div class="progress" style="height:9px; margin:8px 0;">
-						  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
-							<span class="sr-only">80% Complete (danger)</span>
-						  </div>
-						</div>
-					</div>
-					<div class="pull-right" style="margin-left:10px;">0</div>
-				</div>
-			</div>			
-		</div>			
+      <div class="row">
+        <h2>
+          Mr. M.'s Hair Saloon
+        </h2>
+
+        <div class="col-md-6">
+          <h3>
+            <small>M034, DESASISWA RESTU</small>
+          </h3>
+          <p>
+            BASIC DESCRIPTION Sample of date display with sample layout. Note image changes color on mouse over and is responsive.
+          </p>
+
+          <h4>
+            SERVICE MENU
+          </h4>
+          <p id="serviceList"></p>
+         <ul class="list-group text-center">
+            <li class="list-group-item">EYEBROW SHAPING
+              <p class="list-group-item-text"> $15.00</p>
+            </li>
+            <li class="list-group-item">JUNIOR HAIRCUT
+              <p class="list-group-item-text"> $15.00</p>
+            </li>
+            <li class="list-group-item">HAIR WASHING
+              <p class="list-group-item-text"> $15.00</p>
+            </li>
+          </ul> 
+        </div>
+        <!--/. col-md -->
 		
-		<div class="row">
-			<div class="col-sm-7">
-				<hr/>
-				<div class="review-block">
-					<div class="row">
-						<div class="col-sm-3">
-							<img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-							<div class="review-block-name"><a href="#">nktailor</a></div>
-							<div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-						</div>
-						<div class="col-sm-9">
-							<div class="review-block-rate">
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+    <div class="col-md-5" id="map" style="width:450px;height:450px"></div>
+	
+      <!--/row-->
+    </div>
+    <!--./container -->
+
+    <!-- photo gallery -->
+
+    <section>
+      <div class="container gal-container">
+        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#1">
+              <img src="http://stylenet.com/files/2259/319121-tampa_FL_salon_spa_banner.jpg">
+            </a>
+            <div class="modal fade" id="1" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/i3xhd/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the first one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#2">
+              <img src="http://placemi.com/gut3z/1000x750">
+            </a>
+            <div class="modal fade" id="2" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/gut3z/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the second one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#3">
+              <img src="http://placemi.com/yggpo/1000x750">
+            </a>
+            <div class="modal fade" id="3" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/yggpo/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the third one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#4">
+              <img src="http://placemi.com/49zqo/1000x750">
+            </a>
+            <div class="modal fade" id="4" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/49zqo/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the fourth one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#5">
+              <img src="http://placemi.com/k2mjk/1000x750">
+            </a>
+            <div class="modal fade" id="5" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/k2mjk/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the fifth one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#6">
+              <img src="http://placemi.com/lv0ga/1000x750">
+            </a>
+            <div class="modal fade" id="6" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/lv0ga/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the sixth one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#7">
+              <img src="http://placemi.com/3rezh/1000x750">
+            </a>
+            <div class="modal fade" id="7" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/3rezh/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the seventh one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#8">
+              <img src="http://placemi.com/nfjhz/1000x750">
+            </a>
+            <div class="modal fade" id="8" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/nfjhz/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the eighth one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#9">
+              <img src="http://placemi.com/59h1p/1000x750">
+            </a>
+            <div class="modal fade" id="9" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/59h1p/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the ninth one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#10">
+              <img src="http://placemi.com/lybbn/1000x750">
+            </a>
+            <div class="modal fade" id="10" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/lybbn/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the tenth one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#11">
+              <img src="http://placemi.com/vnatq/1000x750">
+            </a>
+            <div class="modal fade" id="11" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/vnatq/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the leventh one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#12">
+              <img src="http://placemi.com/wbjov/1000x750">
+            </a>
+            <div class="modal fade" id="12" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/wbjov/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the 12th one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#13">
+              <img src="http://placemi.com/ts4a8/1000x750">
+            </a>
+            <div class="modal fade" id="13" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/ts4a8/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the 13th one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#14">
+              <img src="http://placemi.com/i8yd4/1000x750">
+            </a>
+            <div class="modal fade" id="14" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/i8yd4/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the 14th one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#15">
+              <img src="http://placemi.com/ak6mk/1000x750">
+            </a>
+            <div class="modal fade" id="15" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/ak6mk/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the 15th one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+          <div class="box">
+            <a href="#" data-toggle="modal" data-target="#16">
+              <img src="http://placemi.com/pgco7/1000x750">
+            </a>
+            <div class="modal fade" id="16" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <img src="http://placemi.com/pgco7/1000x750">
+                  </div>
+                  <div class="col-md-12 description">
+                    <h4>This is the 16th one on my Gallery</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- comments and rating -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="rating-block">
+            <h4>Average user rating</h4>
+            <h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
+            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h4>Rating breakdown</h4>
+          <div class="pull-left">
+            <div class="pull-left" style="width:35px; line-height:1;">
+              <div style="height:9px; margin:5px 0;">5 <span class="glyphicon glyphicon-star"></span></div>
+            </div>
+            <div class="pull-left" style="width:180px;">
+              <div class="progress" style="height:9px; margin:8px 0;">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 1000%">
+                  <span class="sr-only">80% Complete (danger)</span>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right" style="margin-left:10px;">1</div>
+          </div>
+          <div class="pull-left">
+            <div class="pull-left" style="width:35px; line-height:1;">
+              <div style="height:9px; margin:5px 0;">4 <span class="glyphicon glyphicon-star"></span></div>
+            </div>
+            <div class="pull-left" style="width:180px;">
+              <div class="progress" style="height:9px; margin:8px 0;">
+                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+                  <span class="sr-only">80% Complete (danger)</span>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right" style="margin-left:10px;">1</div>
+          </div>
+          <div class="pull-left">
+            <div class="pull-left" style="width:35px; line-height:1;">
+              <div style="height:9px; margin:5px 0;">3 <span class="glyphicon glyphicon-star"></span></div>
+            </div>
+            <div class="pull-left" style="width:180px;">
+              <div class="progress" style="height:9px; margin:8px 0;">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+                  <span class="sr-only">80% Complete (danger)</span>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right" style="margin-left:10px;">0</div>
+          </div>
+          <div class="pull-left">
+            <div class="pull-left" style="width:35px; line-height:1;">
+              <div style="height:9px; margin:5px 0;">2 <span class="glyphicon glyphicon-star"></span></div>
+            </div>
+            <div class="pull-left" style="width:180px;">
+              <div class="progress" style="height:9px; margin:8px 0;">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
+                  <span class="sr-only">80% Complete (danger)</span>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right" style="margin-left:10px;">0</div>
+          </div>
+          <div class="pull-left">
+            <div class="pull-left" style="width:35px; line-height:1;">
+              <div style="height:9px; margin:5px 0;">1 <span class="glyphicon glyphicon-star"></span></div>
+            </div>
+            <div class="pull-left" style="width:180px;">
+              <div class="progress" style="height:9px; margin:8px 0;">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
+                  <span class="sr-only">80% Complete (danger)</span>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right" style="margin-left:10px;">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-7">
+          <hr/>
+          <div class="review-block">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                <div class="review-block-name"><a href="#">nktailor</a></div>
+                <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+              </div>
+              <div class="col-sm-9">
+                <div class="review-block-rate">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-							</div>
-							<div class="review-block-title">this was nice in buy</div>
-							<div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</div>
-						</div>
-					</div>
-					<hr/>
-					<div class="row">
-						<div class="col-sm-3">
-							<img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-							<div class="review-block-name"><a href="#">nktailor</a></div>
-							<div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-						</div>
-						<div class="col-sm-9">
-							<div class="review-block-rate">
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                </div>
+                <div class="review-block-title">this was nice in buy</div>
+                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy
+                  this was nice in buy this was nice in buy this was nice in buy</div>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                <div class="review-block-name"><a href="#">nktailor</a></div>
+                <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+              </div>
+              <div class="col-sm-9">
+                <div class="review-block-rate">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-							</div>
-							<div class="review-block-title">this was nice in buy</div>
-							<div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</div>
-						</div>
-					</div>
-					<hr/>
-					<div class="row">
-						<div class="col-sm-3">
-							<img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-							<div class="review-block-name"><a href="#">nktailor</a></div>
-							<div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-						</div>
-						<div class="col-sm-9">
-							<div class="review-block-rate">
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                </div>
+                <div class="review-block-title">this was nice in buy</div>
+                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy
+                  this was nice in buy this was nice in buy this was nice in buy</div>
+              </div>
+            </div>
+            <hr/>
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                <div class="review-block-name"><a href="#">nktailor</a></div>
+                <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+              </div>
+              <div class="col-sm-9">
+                <div class="review-block-rate">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-							</div>
-							<div class="review-block-title">this was nice in buy</div>
-							<div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-    </div> <!-- /container -->
+                </div>
+                <div class="review-block-title">this was nice in buy</div>
+                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy
+                  this was nice in buy this was nice in buy this was nice in buy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /container -->
 
 
-</body>
-<html>
+  </body>
+  <html>
