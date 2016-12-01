@@ -17,7 +17,8 @@
   <!-- Custom CSS -->
   <link href="css/comment-and-rating.css" rel="stylesheet">
   <link href="css/photo-gallery.css" rel="stylesheet">
-
+  <link href="css/make-appointment.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -25,8 +26,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         
     <![endif]-->
-  <!-- jquery script-->
- 
+  <!-- jquery script for map-->
   <script type="text/javascript">
  
           function initMap() {
@@ -45,26 +45,39 @@
       
     </script>
 	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaooOLbl25KX0E_-hnOI6LyLcSBlg-nho&callback=initMap"></script>
+	
+	<!-- jquery script for back button-->
+	 <script>
+	function goBack() {
+		window.history.back()
+}
+</script>
+
   <body>
 
     <!-- page content -->
-    <div class="container">
-      <div class="row">
-        <h2>
+    <div class="container main-container">
+		<br></br>
+		<button onclick="goBack()" class="btn btn-info">Go Back</button>
+	  
+        <h2 align="center">
           Mr. M.'s Hair Saloon
         </h2>
-
-        <div class="col-md-6">
+		
+		<button type="button" class="btn btn-block" data-toggle="modal" data-target="#makeappointment">Make appointment</button>
+		
+        <div class="col-md-12">
           <h3>
             <small>M034, DESASISWA RESTU</small>
           </h3>
           <p>
             BASIC DESCRIPTION Sample of date display with sample layout. Note image changes color on mouse over and is responsive.
           </p>
-
-          <h4>
-            SERVICE MENU
-          </h4>
+		  
+		  <br></br>		  
+          <h2>
+            Service Menu
+          </h2>
           <p id="serviceList"></p>
          <ul class="list-group text-center">
             <li class="list-group-item">EYEBROW SHAPING
@@ -78,536 +91,456 @@
             </li>
           </ul> 
         </div>
-        <!--/. col-md -->
-		
-    <div class="col-md-5" id="map" style="width:450px;height:450px"></div>
-	
-      <!--/row-->
-    </div>
+		 <!--/. col-md-12 -->
+		<div class="col-md-5" id="map" style="width:100%;height:450px"></div>
+       
+   </div>
     <!--./container -->
-
+	
     <!-- photo gallery -->
-
-    <section>
-      <div class="container gal-container">
-        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#1">
-              <img src="http://stylenet.com/files/2259/319121-tampa_FL_salon_spa_banner.jpg">
-            </a>
-            <div class="modal fade" id="1" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/i3xhd/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the first one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#2">
-              <img src="http://placemi.com/gut3z/1000x750">
-            </a>
-            <div class="modal fade" id="2" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/gut3z/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the second one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#3">
-              <img src="http://placemi.com/yggpo/1000x750">
-            </a>
-            <div class="modal fade" id="3" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/yggpo/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the third one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#4">
-              <img src="http://placemi.com/49zqo/1000x750">
-            </a>
-            <div class="modal fade" id="4" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/49zqo/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the fourth one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#5">
-              <img src="http://placemi.com/k2mjk/1000x750">
-            </a>
-            <div class="modal fade" id="5" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/k2mjk/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the fifth one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#6">
-              <img src="http://placemi.com/lv0ga/1000x750">
-            </a>
-            <div class="modal fade" id="6" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/lv0ga/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the sixth one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#7">
-              <img src="http://placemi.com/3rezh/1000x750">
-            </a>
-            <div class="modal fade" id="7" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/3rezh/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the seventh one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#8">
-              <img src="http://placemi.com/nfjhz/1000x750">
-            </a>
-            <div class="modal fade" id="8" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/nfjhz/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the eighth one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#9">
-              <img src="http://placemi.com/59h1p/1000x750">
-            </a>
-            <div class="modal fade" id="9" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/59h1p/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the ninth one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#10">
-              <img src="http://placemi.com/lybbn/1000x750">
-            </a>
-            <div class="modal fade" id="10" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/lybbn/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the tenth one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#11">
-              <img src="http://placemi.com/vnatq/1000x750">
-            </a>
-            <div class="modal fade" id="11" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/vnatq/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the leventh one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#12">
-              <img src="http://placemi.com/wbjov/1000x750">
-            </a>
-            <div class="modal fade" id="12" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/wbjov/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the 12th one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#13">
-              <img src="http://placemi.com/ts4a8/1000x750">
-            </a>
-            <div class="modal fade" id="13" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/ts4a8/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the 13th one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#14">
-              <img src="http://placemi.com/i8yd4/1000x750">
-            </a>
-            <div class="modal fade" id="14" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/i8yd4/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the 14th one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#15">
-              <img src="http://placemi.com/ak6mk/1000x750">
-            </a>
-            <div class="modal fade" id="15" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/ak6mk/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the 15th one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="box">
-            <a href="#" data-toggle="modal" data-target="#16">
-              <img src="http://placemi.com/pgco7/1000x750">
-            </a>
-            <div class="modal fade" id="16" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <div class="modal-body">
-                    <img src="http://placemi.com/pgco7/1000x750">
-                  </div>
-                  <div class="col-md-12 description">
-                    <h4>This is the 16th one on my Gallery</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<br></br>
+<div class="container">
+	<div class="row">
+		<h2>Photo Gallery</h2>
+	</div>
+	
+	<div class="row img-thumbnails">
+	    <div class="col-md-6">
+	        <a href="#">
+	            <img src="http://lorempixel.com/600/600/nature/1/" class="img-thumbnail">
+	        </a>
+	    </div>
+	    <div class="col-md-6">
+	        <a href="#">
+	            <img src="http://lorempixel.com/600/600/nature/2/" class="img-thumbnail">
+	        </a>
+	    </div>
+	    <div class="col-md-4">
+	        <a href="#">
+	            <img src="http://lorempixel.com/600/600/nature/3/" class="img-thumbnail">
+	        </a>
+	    </div>
+	    <div class="col-md-4">
+	        <a href="#">
+	            <img src="http://lorempixel.com/600/600/nature/4/" class="img-thumbnail">
+	        </a>
+	    </div>
+	    <div class="col-md-4">
+	        <a href="#">
+	            <img src="http://lorempixel.com/600/600/nature/5/" class="img-thumbnail">
+	        </a>
+	    </div>
+	</div>
+	
+</div>
 
     <!-- comments and rating -->
-    <div class="container">
+   <div class="container">
+  <div class="post-comments">
 
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="rating-block">
-            <h4>Average user rating</h4>
-            <h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
-            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <h4>Rating breakdown</h4>
-          <div class="pull-left">
-            <div class="pull-left" style="width:35px; line-height:1;">
-              <div style="height:9px; margin:5px 0;">5 <span class="glyphicon glyphicon-star"></span></div>
-            </div>
-            <div class="pull-left" style="width:180px;">
-              <div class="progress" style="height:9px; margin:8px 0;">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 1000%">
-                  <span class="sr-only">80% Complete (danger)</span>
-                </div>
-              </div>
-            </div>
-            <div class="pull-right" style="margin-left:10px;">1</div>
-          </div>
-          <div class="pull-left">
-            <div class="pull-left" style="width:35px; line-height:1;">
-              <div style="height:9px; margin:5px 0;">4 <span class="glyphicon glyphicon-star"></span></div>
-            </div>
-            <div class="pull-left" style="width:180px;">
-              <div class="progress" style="height:9px; margin:8px 0;">
-                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
-                  <span class="sr-only">80% Complete (danger)</span>
-                </div>
-              </div>
-            </div>
-            <div class="pull-right" style="margin-left:10px;">1</div>
-          </div>
-          <div class="pull-left">
-            <div class="pull-left" style="width:35px; line-height:1;">
-              <div style="height:9px; margin:5px 0;">3 <span class="glyphicon glyphicon-star"></span></div>
-            </div>
-            <div class="pull-left" style="width:180px;">
-              <div class="progress" style="height:9px; margin:8px 0;">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                  <span class="sr-only">80% Complete (danger)</span>
-                </div>
-              </div>
-            </div>
-            <div class="pull-right" style="margin-left:10px;">0</div>
-          </div>
-          <div class="pull-left">
-            <div class="pull-left" style="width:35px; line-height:1;">
-              <div style="height:9px; margin:5px 0;">2 <span class="glyphicon glyphicon-star"></span></div>
-            </div>
-            <div class="pull-left" style="width:180px;">
-              <div class="progress" style="height:9px; margin:8px 0;">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
-                  <span class="sr-only">80% Complete (danger)</span>
-                </div>
-              </div>
-            </div>
-            <div class="pull-right" style="margin-left:10px;">0</div>
-          </div>
-          <div class="pull-left">
-            <div class="pull-left" style="width:35px; line-height:1;">
-              <div style="height:9px; margin:5px 0;">1 <span class="glyphicon glyphicon-star"></span></div>
-            </div>
-            <div class="pull-left" style="width:180px;">
-              <div class="progress" style="height:9px; margin:8px 0;">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
-                  <span class="sr-only">80% Complete (danger)</span>
-                </div>
-              </div>
-            </div>
-            <div class="pull-right" style="margin-left:10px;">0</div>
-          </div>
-        </div>
+    <form>
+      <div class="form-group">
+        <label for="comment">Your Comment</label>
+        <textarea name="comment" class="form-control" rows="3"></textarea>
       </div>
+      <button type="submit" class="btn btn-default">Send</button>
+    </form>
 
-      <div class="row">
-        <div class="col-sm-7">
-          <hr/>
-          <div class="review-block">
-            <div class="row">
-              <div class="col-sm-3">
-                <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-                <div class="review-block-name"><a href="#">nktailor</a></div>
-                <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-              </div>
-              <div class="col-sm-9">
-                <div class="review-block-rate">
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                </div>
-                <div class="review-block-title">this was nice in buy</div>
-                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy
-                  this was nice in buy this was nice in buy this was nice in buy</div>
-              </div>
-            </div>
-            <hr/>
-            <div class="row">
-              <div class="col-sm-3">
-                <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-                <div class="review-block-name"><a href="#">nktailor</a></div>
-                <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-              </div>
-              <div class="col-sm-9">
-                <div class="review-block-rate">
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                </div>
-                <div class="review-block-title">this was nice in buy</div>
-                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy
-                  this was nice in buy this was nice in buy this was nice in buy</div>
-              </div>
-            </div>
-            <hr/>
-            <div class="row">
-              <div class="col-sm-3">
-                <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-                <div class="review-block-name"><a href="#">nktailor</a></div>
-                <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-              </div>
-              <div class="col-sm-9">
-                <div class="review-block-rate">
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                  <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								</button>
-                </div>
-                <div class="review-block-title">this was nice in buy</div>
-                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy
-                  this was nice in buy this was nice in buy this was nice in buy</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="comments-nav">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  there are 2593 comments <span class="caret"></span>
+                </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Best</a></li>
+            <li><a href="#">Hot</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <!-- /container -->
 
+    <div class="row">
+
+      <div class="media">
+        <!-- first comment -->
+
+        <div class="media-heading">
+          <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> terminator 12 hours ago
+        </div>
+
+        <div class="panel-collapse collapse in" id="collapseOne">
+
+          <div class="media-left">
+            <div class="vote-wrap">
+              <div class="save-post">
+                <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
+              </div>
+              <div class="vote up">
+                <i class="glyphicon glyphicon-menu-up"></i>
+              </div>
+              <div class="vote inactive">
+                <i class="glyphicon glyphicon-menu-down"></i>
+              </div>
+            </div>
+            <!-- vote-wrap -->
+          </div>
+          <!-- media-left -->
+
+
+          <div class="media-body">
+            <p>yazmayın artık amk, görmeyeyim sol framede. insan bi meraklanıyor, ümitleniyor. sonra yine özlem dolu yazıları görüp hayal kırıklığıyla okuyorum.</p>
+            <div class="comment-meta">
+              <span><a href="#">delete</a></span>
+              <span><a href="#">report</a></span>
+              <span><a href="#">hide</a></span>
+              <span>
+                        <a class="" role="button" data-toggle="collapse" href="#replyCommentT" aria-expanded="false" aria-controls="collapseExample">reply</a>
+                      </span>
+              <div class="collapse" id="replyCommentT">
+                <form>
+                  <div class="form-group">
+                    <label for="comment">Your Comment</label>
+                    <textarea name="comment" class="form-control" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-default">Send</button>
+                </form>
+              </div>
+            </div>
+            <!-- comment-meta -->
+
+            <div class="media">
+              <!-- answer to the first comment -->
+
+              <div class="media-heading">
+                <button class="btn btn-default btn-collapse btn-xs" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> vertu 12 sat once yazmis
+              </div>
+
+              <div class="panel-collapse collapse in" id="collapseTwo">
+
+                <div class="media-left">
+                  <div class="vote-wrap">
+                    <div class="save-post">
+                      <a href="#"><span class="glyphicon glyphicon-star" aria-label="Save"></span></a>
+                    </div>
+                    <div class="vote up">
+                      <i class="glyphicon glyphicon-menu-up"></i>
+                    </div>
+                    <div class="vote inactive">
+                      <i class="glyphicon glyphicon-menu-down"></i>
+                    </div>
+                  </div>
+                  <!-- vote-wrap -->
+                </div>
+                <!-- media-left -->
+
+
+                <div class="media-body">
+                  <p>yazmayın artık amk, görmeyeyim sol framede. insan bi meraklanıyor, ümitleniyor. sonra yine özlem dolu yazıları görüp hayal kırıklığıyla okuyorum.</p>
+                  <div class="comment-meta">
+                    <span><a href="#">delete</a></span>
+                    <span><a href="#">report</a></span>
+                    <span><a href="#">hide</a></span>
+                            <span>
+                              <a class="" role="button" data-toggle="collapse" href="#replyCommentThree" aria-expanded="false" aria-controls="collapseExample">reply</a>
+                            </span>
+                    <div class="collapse" id="replyCommentThree">
+                      <form>
+                        <div class="form-group">
+                          <label for="comment">Your Comment</label>
+                          <textarea name="comment" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Send</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- comment-meta -->
+                </div>
+              </div>
+              <!-- comments -->
+
+            </div>
+            <!-- answer to the first comment -->
+
+          </div>
+        </div>
+        <!-- comments -->
+
+      </div>
+      <!-- first comment -->
+      <div class="media">
+        <!-- first comment -->
+
+        <div class="media-heading">
+          <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> vertu 12 sat once yazmis
+        </div>
+
+        <div class="panel-collapse collapse in" id="collapseThree">
+
+          <div class="media-left">
+            <div class="vote-wrap">
+              <div class="save-post">
+                <a href="#"><span class="glyphicon glyphicon-star" aria-label="Kaydet"></span></a>
+              </div>
+              <div class="vote up">
+                <i class="glyphicon glyphicon-menu-up"></i>
+              </div>
+              <div class="vote inactive">
+                <i class="glyphicon glyphicon-menu-down"></i>
+              </div>
+            </div>
+            <!-- vote-wrap -->
+          </div>
+          <!-- media-left -->
+
+
+          <div class="media-body">
+            <p>yazmayın artık amk, görmeyeyim sol framede. insan bi meraklanıyor, ümitleniyor. sonra yine özlem dolu yazıları görüp hayal kırıklığıyla okuyorum.</p>
+            <div class="comment-meta">
+              <span><a href="#">sil</a></span>
+              <span><a href="#">kaydet</a></span>
+              <span><a href="#">sikayer et</a></span>
+              <span>
+                        <a class="" role="button" data-toggle="collapse" href="#replyCommentFour" aria-expanded="false" aria-controls="collapseExample">cevapla</a>
+                      </span>
+              <div class="collapse" id="replyCommentFour">
+                <form>
+                  <div class="form-group">
+                    <label for="comment">Yorumunuz</label>
+                    <textarea name="comment" class="form-control" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-default">Yolla</button>
+                </form>
+              </div>
+            </div>
+            <!-- comment-meta -->
+
+            <div class="media">
+              <!-- answer to the first comment -->
+
+              <div class="media-heading">
+                <button class="btn btn-default btn-collapse btn-xs" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> vertu 12 sat once yazmis
+              </div>
+
+              <div class="panel-collapse collapse in" id="collapseFour">
+
+                <div class="media-left">
+                  <div class="vote-wrap">
+                    <div class="save-post">
+                      <a href="#"><span class="glyphicon glyphicon-star" aria-label="Kaydet"></span></a>
+                    </div>
+                    <div class="vote up">
+                      <i class="glyphicon glyphicon-menu-up"></i>
+                    </div>
+                    <div class="vote inactive">
+                      <i class="glyphicon glyphicon-menu-down"></i>
+                    </div>
+                  </div>
+                  <!-- vote-wrap -->
+                </div>
+                <!-- media-left -->
+
+
+                <div class="media-body">
+                  <p>yazmayın artık amk, görmeyeyim sol framede. insan bi meraklanıyor, ümitleniyor. sonra yine özlem dolu yazıları görüp hayal kırıklığıyla okuyorum.</p>
+                  <div class="comment-meta">
+                    <span><a href="#">sil</a></span>
+                    <span><a href="#">kaydet</a></span>
+                    <span><a href="#">sikayer et</a></span>
+                    <span>
+                              <a class="" role="button" data-toggle="collapse" href="#replyCommentFive" aria-expanded="false" aria-controls="collapseExample">cevapla</a>
+                            </span>
+                    <div class="collapse" id="replyCommentFive">
+                      <form>
+                        <div class="form-group">
+                          <label for="comment">Yorumunuz</label>
+                          <textarea name="comment" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Yolla</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- comment-meta -->
+
+                  <div class="media">
+                    <!-- first comment -->
+
+                    <div class="media-heading">
+                      <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> vertu 12 sat once yazmis
+                    </div>
+
+                    <div class="panel-collapse collapse in" id="collapseFive">
+
+                      <div class="media-left">
+                        <div class="vote-wrap">
+                          <div class="save-post">
+                            <a href="#"><span class="glyphicon glyphicon-star" aria-label="Kaydet"></span></a>
+                          </div>
+                          <div class="vote up">
+                            <i class="glyphicon glyphicon-menu-up"></i>
+                          </div>
+                          <div class="vote inactive">
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                          </div>
+                        </div>
+                        <!-- vote-wrap -->
+                      </div>
+                      <!-- media-left -->
+
+
+                      <div class="media-body">
+                        <p>yazmayın artık amk, görmeyeyim sol framede. insan bi meraklanıyor, ümitleniyor. sonra yine özlem dolu yazıları görüp hayal kırıklığıyla okuyorum.</p>
+                        <div class="comment-meta">
+                          <span><a href="#">sil</a></span>
+                          <span><a href="#">kaydet</a></span>
+                          <span><a href="#">sikayer et</a></span>
+                          <span>
+                        <a class="" role="button" data-toggle="collapse" href="#replyCommentSix" aria-expanded="false" aria-controls="collapseExample">cevapla</a>
+                      </span>
+                          <div class="collapse" id="replyCommentSix">
+                            <form>
+                              <div class="form-group">
+                                <label for="comment">Yorumunuz</label>
+                                <textarea name="comment" class="form-control" rows="3"></textarea>
+                              </div>
+                              <button type="submit" class="btn btn-default">Yolla</button>
+                            </form>
+                          </div>
+                        </div>
+                        <!-- comment-meta -->
+
+                        <div class="media">
+                          <!-- answer to the first comment -->
+
+                          <div class="media-heading">
+                            <button class="btn btn-default btn-collapse btn-xs" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> <span class="label label-info">12314</span> vertu 12 sat once yazmis
+                          </div>
+
+                          <div class="panel-collapse collapse in" id="collapseSix">
+
+                            <div class="media-left">
+                              <div class="vote-wrap">
+                                <div class="save-post">
+                                  <a href="#"><span class="glyphicon glyphicon-star" aria-label="Kaydet"></span></a>
+                                </div>
+                                <div class="vote up">
+                                  <i class="glyphicon glyphicon-menu-up"></i>
+                                </div>
+                                <div class="vote inactive">
+                                  <i class="glyphicon glyphicon-menu-down"></i>
+                                </div>
+                              </div>
+                              <!-- vote-wrap -->
+                            </div>
+                            <!-- media-left -->
+
+
+                            <div class="media-body">
+                              <p>yazmayın artık amk, görmeyeyim sol framede. insan bi meraklanıyor, ümitleniyor. sonra yine özlem dolu yazıları görüp hayal kırıklığıyla okuyorum.</p>
+                              <div class="comment-meta">
+                                <span><a href="#">sil</a></span>
+                                <span><a href="#">kaydet</a></span>
+                                <span><a href="#">sikayer et</a></span>
+                                <span>
+                              <a class="" role="button" data-toggle="collapse" href="#replyCommentOne" aria-expanded="false" aria-controls="collapseExample">cevapla</a>
+                            </span>
+                                <div class="collapse" id="replyCommentOne">
+                                  <form>
+                                    <div class="form-group">
+                                      <label for="comment">Yorumunuz</label>
+                                      <textarea name="comment" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Yolla</button>
+                                  </form>
+                                </div>
+                              </div>
+                              <!-- comment-meta -->
+
+
+                            </div>
+                          </div>
+                          <!-- comments -->
+
+                        </div>
+                        <!-- answer to the first comment -->
+
+                      </div>
+                    </div>
+                    <!-- comments -->
+
+                  </div>
+                  <!-- first comment -->
+                </div>
+              </div>
+              <!-- comments -->
+
+            </div>
+            <!-- answer to the first comment -->
+
+          </div>
+        </div>
+        <!-- comments -->
+
+      </div>
+      <!-- first comment -->
+    </div>
+
+  </div>
+  <!-- post-comments -->
+</div>
+
+
+	
+<!-- MODAL
+	============================================= -->
+	<!-- MODAL make appointment -->
+<div class="modal fade" id="makeappointment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">Make Appointment</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-md-3" class="control-label">Send to:</label>
+              <div class="col-md-9">        
+                <div class="modtagere">
+                    <div class="to">
+                    <div class="to-dropdown">
+</div>Beta Cykler <beta@cykler.dk> <span class="pull-right icon-remove-sign"></span></div>              
+                </div>
+                </div>
+            </div>      
+            <div class="form-group">
+              <label class="col-md-3" class="control-label">Message:</label>
+              <div class="col-md-9">
+              <div class="">              
+              <div id="editor">Hej mr. X<br/>
+              </div>
+              </div>
+              </div>
+            </div>
+        </form>
+        </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	 <!-- JS PLUGINS
+	============================================= -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap-assets/js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>  
 
   </body>
   <html>

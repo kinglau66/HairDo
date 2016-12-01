@@ -161,6 +161,125 @@ $(document).ready(function () {
         init();
     });
 	
-	
+	/***************** Google map ******************/
+          function initMap() {
+		  var pos = {lat:5.358315, lng:100.30234730000006};
+          
+          var map = new google.maps.Map(document.getElementById('map'),{ 
+              zoom: 18,
+			  center: pos
+          });
+		  
+		  var marker = new google.maps.Marker({
+		  position: pos,
+		  map:map
+			});  
+        }
+      
+	/***************** Comments ******************/
+	$('[data-toggle="collapse"]').on('click', function() {
+    var $this = $(this),
+            $parent = typeof $this.data('parent')!== 'undefined' ? $($this.data('parent')) : undefined;
+    if($parent === undefined) { /* Just toggle my  */
+        $this.find('.glyphicon').toggleClass('glyphicon-plus glyphicon-minus');
+        return true;
+    }
+
+    /* Open element will be close if parent !== undefined */
+    var currentIcon = $this.find('.glyphicon');
+    currentIcon.toggleClass('glyphicon-plus glyphicon-minus');
+    $parent.find('.glyphicon').not(currentIcon).removeClass('glyphicon-minus').addClass('glyphicon-plus');
+
+});
+
+	/***************** Mailing ******************/
+$('#mailadr').keydown(function(e)  {
+   if (e.keyCode == 13) {
+       var val = $('#mailadr').val();
+       addMail(val);
+   } 
+});
+
+var substringMatcher = function(strs) {
+  return function findMatches(q, cb) {
+    var matches, substrRegex;
+ 
+    // an array that will be populated with substring matches
+    matches = [];
+ 
+    // regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(q, 'i');
+ 
+    // iterate through the pool of strings and for any string that
+    // contains the substring `q`, add it to the `matches` array
+    $.each(strs, function(i, str) {
+      if (substrRegex.test(str)) {
+        // the typeahead jQuery plugin expects suggestions to a
+        // JavaScript object, refer to typeahead docs for more info
+        var div = $('<div></div>');
+        div.text(str);
+        matches.push({ display: div.text(), value: str});
+      }
+    });
+    cb(matches);
+  };
+};
+ 
+$('#mailadr').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1
+},
+{
+  name: 'mails',
+  displayKey: "value",
+  source: substringMatcher(data),
+  templates: {
+      empty: '<i>Ingen adresser matcher</i>',
+      suggestion: Handlebars.compile('<p>{{display}}</p>')
+  }
+});
+$('#mailadr').on('typeahead:selected', function(e,item) {
+    addMail(item.value);
+    return item;
+});
+
+/***************** Upload gallery photo******************/
++ function($) {
+    'use strict';
+
+
+    var dropZone = document.getElementById('drop-zone');
+    var uploadForm = document.getElementById('js-upload-form');
+
+    var startUpload = function(files) {
+        console.log(files)
+    }
+
+    uploadForm.addEventListener('submit', function(e) {
+        var uploadFiles = document.getElementById('js-upload-files').files;
+        e.preventDefault()
+
+        startUpload(uploadFiles)
+    })
+
+    dropZone.ondrop = function(e) {
+        e.preventDefault();
+        this.className = 'upload-drop-zone';
+
+        startUpload(e.dataTransfer.files)
+    }
+
+    dropZone.ondragover = function() {
+        this.className = 'upload-drop-zone drop';
+        return false;
+    }
+
+    dropZone.ondragleave = function() {
+        this.className = 'upload-drop-zone';
+        return false;
+    }
+
+}(jQuery);
 
 })
