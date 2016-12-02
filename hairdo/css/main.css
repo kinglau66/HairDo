@@ -16,12 +16,14 @@ body {
   margin-bottom: 40px;
 }
 
+	
 .light-sep {
   max-width: 80px;
   border: 2px solid #fff;
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 
 /* ==========================================================================
 Typography
@@ -521,16 +523,14 @@ Portfolio Style
     }
   }
   
-  @media(min-width: 600px) {
-  
+  @media(min-width: 600px) { 
     &:nth-of-type(even) {
       margin-right: 2.5em;
     }
     
     &:nth-of-type(5) {
       margin-right: 0;
-    }
-    
+    }   
   }
   
   &:hover { text-decoration: none; }
@@ -547,7 +547,19 @@ Portfolio Style
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 } 
 
-
+//Search bar style
+.searchbardiv{
+    display: block;
+    position: fixed;
+    background: #7D1935 ;
+    top: 50px;
+    right: 0px;
+    z-index: 1001;
+    width: 50%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0px;
+}
     /* ==========================================================================
 Work Process Style
 ========================================================================== */
@@ -699,35 +711,6 @@ Testimonials Style
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-
-    /* ==========================================================================
-Contact Us Style
-========================================================================== */
-#contact {
-  padding: 60px 0;
-  text-align: center;
-}
-#contact h2 {
-  text-transform: uppercase;
-}
-#contact form {
-  margin: 40px 0;
-}
-#contact .form-group {
-  margin-bottom: 35px;
-}
-#contact .form-control {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border: 2px solid #24242a;
-  color: #0d0d0d;
-  min-height: 45px;
-}
-#contact textarea {
-  height: 140px;
-  resize: none;
 }
 
     /* ==========================================================================

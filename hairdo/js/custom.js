@@ -193,6 +193,17 @@ $(document).ready(function () {
 });
 
 	/***************** Mailing ******************/
+$(document).on('click', '.to .icon-remove-sign', function() {
+  $(this).parent().remove();
+})
+function addMail(val) {
+       if (val) {
+           var to = $('<div class="to"><span class="addr"></span><span class="pull-right icon-remove-sign"></span></div>');
+           to.find('.addr').text(val);
+           $('.modtagere').append(to);
+       }
+}
+	
 $('#mailadr').keydown(function(e)  {
    if (e.keyCode == 13) {
        var val = $('#mailadr').val();
@@ -224,7 +235,17 @@ var substringMatcher = function(strs) {
     cb(matches);
   };
 };
- 
+
+var data = [
+    'Rasmus Fuglsang <rlf@logiva.dk>', 
+    'Stark Århus <aarhus@stark.dk>', 
+    'Jens Wulf <jeww@logiva.dk>', 
+    'mtm@logiva.dk', 
+    'Beta Cykler <beta@cykler.dk>',
+    'Stark Kbh <kbh@stark.dk>',
+    'Marianne Hünesen <mh@logiva.dk>'
+];
+
 $('#mailadr').typeahead({
   hint: true,
   highlight: true,

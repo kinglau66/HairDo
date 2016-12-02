@@ -226,6 +226,7 @@ a:hover { text-decoration: underline; }
   border-color: #d1cdb5;
 }
 
+	
 
 /** profile content sections **/
 .hidden {
@@ -244,6 +245,7 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid #d6d1af;
   margin-bottom: 5px;
 }
+
 .setting span {
   float: left; 
   width: 250px;
@@ -261,15 +263,21 @@ html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
 
 
+/* ==========================================================================
+Upload Gallery Photos Styles
+========================================================================== */
+/* layout.css Style */
 .upload-drop-zone {
   height: 200px;
   border-width: 2px;
   margin-bottom: 20px;
 }
 
-/* ==========================================================================
-Upload Gallery Photos Styles
-========================================================================== */
+.panel-default{
+  width: 700px;
+  border-width: 2px;
+margin-bottom: 20px;}
+
 .upload-drop-zone {
   color: #ccc;
   border-style: dashed;

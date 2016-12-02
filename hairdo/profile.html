@@ -19,6 +19,12 @@
   <link href="css/photo-gallery.css" rel="stylesheet">
   <link href="css/make-appointment.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  
+	 <!-- JS PLUGINS
+	============================================= -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap-assets/js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -46,20 +52,13 @@
     </script>
 	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaooOLbl25KX0E_-hnOI6LyLcSBlg-nho&callback=initMap"></script>
 	
-	<!-- jquery script for back button-->
-	 <script>
-	function goBack() {
-		window.history.back()
-}
-</script>
 
   <body>
 
     <!-- page content -->
     <div class="container main-container">
 		<br></br>
-		<button onclick="goBack()" class="btn btn-info">Go Back</button>
-	  
+		<a onclick="location.href='index.html'" class="btn btn-info">Go Back</a>
         <h2 align="center">
           Mr. M.'s Hair Saloon
         </h2>
@@ -489,58 +488,45 @@
   <!-- post-comments -->
 </div>
 
-
-	
-<!-- MODAL
-	============================================= -->
-	<!-- MODAL make appointment -->
+<!-- MODAL make appointment -->
 <div class="modal fade" id="makeappointment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+	<section id= "appointment">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="myModalLabel">Make Appointment</h4>
+        <h2 class="modal-title" id="myModalLabel">Make Appointment</h2>
       </div>
       <div class="modal-body">
-        <div>
-        <form class="form-horizontal" role="form">
-            <div class="form-group">
-              <label class="col-md-3" class="control-label">Send to:</label>
-              <div class="col-md-9">        
-                <div class="modtagere">
-                    <div class="to">
-                    <div class="to-dropdown">
-</div>Beta Cykler <beta@cykler.dk> <span class="pull-right icon-remove-sign"></span></div>              
-                </div>
-                </div>
-            </div>      
-            <div class="form-group">
-              <label class="col-md-3" class="control-label">Message:</label>
-              <div class="col-md-9">
-              <div class="">              
-              <div id="editor">Hej mr. X<br/>
-              </div>
-              </div>
-              </div>
+         <!-- Contact Us
+	============================================= -->
+
+        <div class="container">
+            <div class="col-md-5">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    </div>
+                   
+                </form>
             </div>
-        </form>
         </div>
+
+	
 </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Send</button>
+		<a href="#" class="btn-block">Send</a>
       </div>
+	  </section>
     </div>
   </div>
 </div>
-
-
-
-	 <!-- JS PLUGINS
-	============================================= -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="bootstrap-assets/js/bootstrap.min.js"></script>
-	<script src="js/custom.js"></script>  
 
   </body>
   <html>
