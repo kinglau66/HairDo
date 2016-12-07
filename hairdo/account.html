@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Hairdo- The Best Agent for Hair Saloons</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="plugins/animate.css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/colorgraph.css" rel="stylesheet">
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--  i add myself  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+        body {
+            margin-top: 20px;
+        }
+        
+        .fa-fw {
+            width: 2em;
+        }
+    </style>
+    <script>
+    $(document).ready(function()
+    {
+        console.log("fuck");
+        var navItems = $('.admin-menu li > a');
+        var navListItems = $('.admin-menu li');
+        var allWells = $('.admin-content');
+        var allWellsExceptFirst = $('.admin-content:not(:first)');
+        
+        allWellsExceptFirst.hide();
+        navItems.click(function(e)
+        {
+            e.preventDefault();
+            navListItems.removeClass('active');
+            $(this).closest('li').addClass('active');
+            
+            allWells.hide();
+            var target = $(this).attr('data-target-id');
+            $('#' + target).show();
+        });
+    });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked admin-menu">
+                    <li class="active"><a href="#" data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                    <li><a href="#" data-target-id="Profile"><i class="fa fa-list-alt fa-fw"></i>Profile</a></li>
+                    <li><a href="#" data-target-id="Favourite"><i class="fa fa-heart fa-fw"></i>Favourite</a></li>
+                    <li><a href="#" data-target-id="Appointments"><i class="fa fa-calendar fa-fw"></i>Appointments</a></li>
+                    <li><a href="#" data-target-id="Comments"><i class="fa fa-comment-o fa-fw"></i>Comments</a></li>
+                    <li><a href="#" data-target-id="Settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9 well admin-content" id="home">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td width="90"><img src="//76.my/Auc/Img/Member/avatar.gif" class="imgBorder"></td>
+                                            <td colspan="2">
+
+                                                <table width="98%" border="0">
+                                                    <tbody>
+                                                        <tr height="1px">
+                                                            <td width="80px"></td>
+                                                            <td width="5px"></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr valign="top">
+                                                            <td class="rntext">Member Since</td>
+                                                            <td>:</td>
+                                                            <td class="rtext">28 Dec 2015</td>
+                                                        </tr>
+                                                        <tr valign="top">
+                                                            <td class="rntext">Rating</td>
+                                                            <td>:</td>
+                                                            <td class="rtext">
+                                                                <a href="http://www.lelong.com.my/Auc/Feedback/UserRating.asp?UserID=kinglau66@1">
+                                                                    <b>(<span title="Total Item Posted And Bidded">0</span>: <font color="darkgreen" title="Total Unique Ratings">2+,100%</font>)</b></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr valign="top">
+                                                            <td class="rntext">Member Status</td>
+                                                            <td>:</td>
+                                                            <td class="rtext">Active</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+                        </tr>
+                        <tr valign="top">
+                            <td>
+                                <table width="98%" border="0">
+                                    <tbody>
+                                        <tr height="1px">
+                                            <td width="100px"></td>
+                                            <td width="5px"></td>
+                                            <td width="230px"></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr valign="top">
+                                            <td class="rntext">Store Member</td>
+                                            <td>:</td>
+                                            <td class="rtext">
+                                                <font color="#FF0000">No</font>
+                                            </td>
+                                            <td class="text13B"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">MyKad Verified</td>
+                                            <td>:</td>
+                                            <td class="rtext">
+                                                <font color="#FF0000">No</font>
+                                            </td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">Handphone Verified</td>
+                                            <td>:</td>
+                                            <td class="rtext">
+                                                <font color="#FF0000">No</font> <a href="/Auc/Account/Act/" title="Get your handphone verification code here">[ Handphone Verification ]</a></td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">Handphone No.</td>
+                                            <td>:</td>
+                                            <td class="rntext">014-5951099 <a href="/Auc/Account/Act/?task=updatehp">[ Edit ]</a></td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">Home Phone No.</td>
+                                            <td>:</td>
+                                            <td class="rntext">- <a href="/Auc/Account/Account/EditMyInfo.asp">[ Edit ]</a></td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">Office Phone No.</td>
+                                            <td>:</td>
+                                            <td class="rntext">- <a href="/Auc/Account/Account/EditMyInfo.asp">[ Edit ]</a></td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">Email</td>
+                                            <td>:</td>
+                                            <td class="rntext">kinglau66@hotmail.com <a href="/Auc/Account/act/?task=updateemail">[ Edit ]</a></td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td class="rntext">Password</td>
+                                            <td>:</td>
+                                            <td class="rntext"><a href="https://members.lelong.com.my/account/ChangePassword" target="_blank">[ Change ]</a></td>
+                                            <td class="rntext"></td>
+                                        </tr>
+                                        <!--<tr><td colspan=4 valign=center ><hr style="border-color:#00AA00;border-style:none none solid;border-width:1px;"></td></tr>-->
+                                    </tbody>
+                                </table>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-9 well admin-content" id="Profile">
+                Widgets
+            </div>
+            <div class="col-md-9 well admin-content" id="Favourite">
+                Pages
+            </div>
+            <div class="col-md-9 well admin-content" id="Appointments">
+                Charts
+            </div>
+            <div class="col-md-9 well admin-content" id="Comments">
+                Table
+            </div>
+            <div class="col-md-9 well admin-content" id="Settings">
+                Settings
+            </div>
+        </div>
+    </div>
+</body>
