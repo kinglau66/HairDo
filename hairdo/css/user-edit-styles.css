@@ -255,6 +255,10 @@ a:hover { text-decoration: underline; }
   cursor: pointer;
 }
 
+.table-sortable tbody tr {
+    cursor: move;
+}
+
 /** clearfix **/
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 .clearfix { display: inline-block; }
