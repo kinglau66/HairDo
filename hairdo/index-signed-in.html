@@ -25,8 +25,6 @@
 	<link href="css/colorgraph.css" rel="stylesheet">
     <!-- Icons Font -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	
-		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -60,28 +58,16 @@
                             <li><a href="#owl-hero" class="page-scroll">Home</a></li>
                             <li><a href="#portfolio" class="page-scroll">Works</a></li>
                             <li><a href="#team" class="page-scroll">About</a></li>
+					
                         </ul>
-                  	
-                    	<form id="signin" class="navbar-form navbar-right" role="form">
 						
-					     <div class="input-group">
-                            <span class="input-group-addon"><i class="icon-envelope"></i></span>
-                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
-                        </div>
-
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="icon-lock"></i></span>
-                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
-                        </div>
-						
-						<div class="input-group">
-							<a id="loginbutton" class="btn btn-transparent">Login</a>
+						<u1 class="nav navbar-right">		
+						<li class="nav navbar-right"><a href="#">Log out</a></li>
+						<li class="nav navbar-right"><a href="profile-edit.html">Profile</a></li> 
+						 </u1>
+											
 						</div>	
-							
-						<div class="input-group">	
-							<button type="button" id="signupbutton" class="btn btn-transparent" data-toggle="modal" data-target="#modal-signup">Signup</button>	
-						</div>
-				 </form>																				
+
                 </div>
             </div>
         </nav>
@@ -100,9 +86,9 @@
 	============================================= -->
     <section id="portfolio">
         <div class="container-fluid">
-            <h2>Hair Saloon List</h2>
-			
-			<!-- search	bar -->	
+             <h2>Hair Saloon List</h2>
+			 						
+				<!-- search	bar -->	
 				<div class="container searchbardiv" id="formsearch">
 				<form role="search" method="get" id="searchform"  >
 					<div class="input-group">
@@ -115,7 +101,7 @@
                     </div> 
                 </form>
             </div>
-			
+			 
             <hr class="sep">
             <div class="row">
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
@@ -415,8 +401,8 @@ work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></
 			
 			<hr class="colorgraph">
 			<div class="row">
-				<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-block btn-lg" tabindex="7"></div>
-				<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-block btn-lg">Cancel</a></div>
+				<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+				<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-danger btn-block btn-lg">Cancel</a></div>
 			</div>
 		</form>
 		</div>
@@ -453,17 +439,29 @@ work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></
 </div><!-- /.modal-signup -->
 
 
- <!-- JS PLUGINS
+
+
+
+
+
+	
+	 <!-- JS PLUGINS
 	============================================= -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-assets/js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script> 	
+    <script src="js/custom.js"></script>  
+    <!-- JS PLUGINS -->
     <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.easing.min.js"></script>	
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
     <script src="plugins/countTo/jquery.countTo.js"></script>
     <script src="plugins/inview/jquery.inview.min.js"></script>
     <script src="plugins/Lightbox/dist/js/lightbox.min.js"></script>
     <script src="plugins/WOW/dist/wow.min.js"></script>
+
+
 </body>
 
 </html>

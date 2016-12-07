@@ -1,0 +1,31 @@
+    /* ==========================================================================
+Appointment Style
+========================================================================== */
+#appointment {
+  text-align: center;
+}
+#appointment h2 {
+  text-transform: uppercase;
+}
+#appointment form {
+  margin: 50px 0;
+}
+#appointment .form-group {
+  margin-bottom: 35px;
+}
+#appointment .form-control {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 2px solid #24242a;
+  color: #0d0d0d;
+  min-height: 45px;
+}
+#appointment textarea {
+  height: 140px;
+  resize: none;
+}
+
+#appointment .btn-block{
+	text-align: center; 
+}
